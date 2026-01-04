@@ -10,7 +10,7 @@ class Houdini(General):
     partition = "system"
     dl_links = {
         "11": ["https://github.com/supremegamers/vendor_intel_proprietary_houdini/archive/81f2a51ef539a35aead396ab7fce2adf89f46e88.zip", "fbff756612b4144797fbc99eadcb6653"],
-        "13": ["https://github.com/supremegamers/vendor_intel_proprietary_houdini/archive/debc3dc91cf12b5c5b8a1c546a5b0b7bf7f838a8.zip", "cb7ffac26d47ec7c89df43818e126b47"]
+        "13": ["https://github.com/supremegamers/vendor_intel_proprietary_houdini/archive/9e77896350caccd228b36b2e1b4a994aa4bd48da.zip", "3807fe029559db3037efe245d9e74270"]
     }
     act_md5 = ...
     dl_link = ...
@@ -27,7 +27,7 @@ on property:ro.enable.native.bridge.exec=1
     exec -- /system/bin/sh -c "echo ':arm64_dyn:M::\\\\x7f\\\\x45\\\\x4c\\\\x46\\\\x02\\\\x01\\\\x01\\\\x00\\\\x00\\\\x00\\\\x00\\\\x00\\\\x00\\\\x00\\\\x00\\\\x00\\\\x03\\\\x00\\\\xb7::/system/bin/houdini64:P' >> /proc/sys/fs/binfmt_misc/register"
 """
     apply_props = {
-        "ro.product.cpu.abilist": "x86_64,arm64-v8a,x86,armeabi-v7a,armeabi",
+        "ro.product.cpu.abilist": "x86_64,x86,arm64-v8a,armeabi-v7a,armeabi",
         "ro.product.cpu.abilist32": "x86,armeabi-v7a,armeabi",
         "ro.product.cpu.abilist64": "x86_64,arm64-v8a",
         "ro.dalvik.vm.native.bridge": "libhoudini.so",
